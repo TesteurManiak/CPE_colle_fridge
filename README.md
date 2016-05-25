@@ -10,3 +10,5 @@ Partie réalisée :
 Partie à faire:
 - un fichier ".save" est créé mais rien n'est écrit dedans (problème au niveau des flags du open).
 - charger un fichier ".save" au lancement du programme.
+
+Note obtenue à la colle : 14/20
