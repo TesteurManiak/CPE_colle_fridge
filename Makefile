@@ -28,7 +28,10 @@ SRC		=	src/main.c \
 				src/free.c \
 				src/total_len.c \
 				src/my_strcat.c \
-				src/write_in_fd.c
+				src/write_in_fd.c \
+				src/load_fridge.c \
+				src/char_to_int.c \
+				src/add_value.c
  
 OBJ		=	$(SRC:.c=.o)
 

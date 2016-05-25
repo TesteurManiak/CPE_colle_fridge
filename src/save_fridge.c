@@ -20,24 +20,24 @@ void  write_in(int fd, char **tab)
   buffer = my_strcat("", tab[0]);
   while (i < 8)
   {
-    buffer = my_strcat(buffer, "\n");
     buffer = my_strcat(buffer, tab[i]);
     i++;
   }
-  printf("%s\n", buffer);
   write_in_fd(fd, buffer);
 }
 
-void  fill_tab(char **tab)
+void  fill_tab(char **tab, t_fridge *prog)
 {
-  tab[0] = "tomato = ";
-  tab[1] = "dough = ";
-  tab[2] = "ognons = ";
-  tab[3] = "pasta = ";
-  tab[4] = "olive = ";
-  tab[5] = "pepper = ";
-  tab[6] = "ham = ";
-  tab[7] = "cheese = ";
+  tab[0] = "tomato = \n";
+  //add_value(tab[0], prog->tomato);
+  tab[1] = "dough = \n";
+  //add_value(tab[1], prog->dough);
+  tab[2] = "ognons = \n";
+  tab[3] = "pasta = \n";
+  tab[4] = "olive = \n";
+  tab[5] = "pepper = \n";
+  tab[6] = "ham = \n";
+  tab[7] = "cheese = \n";
 }
 
 char  **make_tab()
@@ -60,14 +60,14 @@ void  save_fridge(t_fridge *prog)
   int fd;
   char  **tab;
 
-  fd = open(".save", 'w', S_IRWXU);
+  fd = open(".save", O_CREAT | O_WRONLY, 0644);
   if (fd == -1)
   {
     my_puterr("Error : can't open\n");
     return ;
   }
   tab = make_tab();
-  fill_tab(tab);
+  fill_tab(tab, prog);
   write_in(fd, tab);
   close(fd);
 }

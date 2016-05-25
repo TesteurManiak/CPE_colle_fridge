@@ -44,11 +44,14 @@ int   my_getnbr(char *str);
 int   add_fridge(char *str, t_fridge *prog);
 int   my_strncmp(char *s1, char *s2, int i);
 
+char  *int_to_str(int x);
 char  *my_strcat(char *s1, char *s2);
 char  **my_str_to_wordtab(char *str);
 char  *my_strncpy(char *s1, char *s2, int i);
 char  *get_next_line(const int fd);
 
+void  add_value(char *text, int digit);
+void  load_fridge(t_fridge *prog, int fd);
 void  write_in_fd(int fd, char *str);
 void  free_tab(char **tab);
 void  save_fridge(t_fridge *prog);

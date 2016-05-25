@@ -8,7 +8,7 @@ Partie réalisée :
 - gestion d'erreur complète (gestion du Ctrl + D, message d'erreur en cas de commandes ou de paramètre invalide)
 
 Partie à faire:
-- un fichier ".save" est créé mais rien n'est écrit dedans (problème au niveau des flags du open).
+- écrire les valeurs du frigo dans le .save.
 - charger un fichier ".save" au lancement du programme.
 
 Note obtenue à la colle : 14/20

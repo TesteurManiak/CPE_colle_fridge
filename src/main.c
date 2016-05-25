@@ -12,10 +12,19 @@
 
 int  fridge()
 {
+  int   fd;
   char  *command;
   t_fridge  *prog;
 
-  init_prog(&prog);
+  fd = open(".save", O_RDONLY);
+  if (fd == -1)
+    init_prog(&prog);
+  else
+  {
+    init_prog(&prog);
+    load_fridge(prog, fd);
+  }
+  close (fd);
   while (prog->kill == 0)
   {
     command = get_next_line(0);
