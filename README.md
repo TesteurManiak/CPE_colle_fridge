@@ -6,9 +6,18 @@ L'objectif est de créer un frigo contenant plusieurs ingrédients dont la quant
 Partie réalisée :
 - toutes les commandes sont gérées et fonctionnent parfaitement.
 - gestion d'erreur complète (gestion du Ctrl + D, message d'erreur en cas de commandes ou de paramètre invalide)
+- la lecture du fichier de sauvegarde fonctionne, les valeurs sont récupérées si le fichier est présent, s'il est absent les valeurs par défaut sont appliquées.
 
 Partie à faire:
 - écrire les valeurs du frigo dans le .save.
-- charger un fichier ".save" au lancement du programme.
-
-Note obtenue à la colle : 14/20
+ex :  $> cat .save
+      tomato = $
+      dough = $
+      ognons = $
+      pasta = $
+      olive = $
+      pepper = $
+      ham = $
+      cheese = $
+      $>
+(les valeurs récupérées lors de la lecture du fichier sont 0)
