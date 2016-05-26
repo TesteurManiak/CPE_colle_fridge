@@ -20,6 +20,8 @@ void  load_fridge(t_fridge *prog, int fd)
   while (i < 8)
   {
     line = get_next_line(fd);
+    my_putstr(line);
+    my_putchar('\n');
     if (line == NULL)
       return ;
     if (i == 0)
